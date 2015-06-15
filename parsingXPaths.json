@@ -1,0 +1,130 @@
+{  
+   "parsers":[
+         {
+         "is_json":"false",
+         "name":"PVD_pvdonline",
+         "link":"http://www.providenceonline.com/events.html",
+         "site_type":"2",
+         "pagination":"//span[@class='number ']/a/@href",
+         "pagination_type": "1",
+         "domain":"http://www.providenceonline.com",
+         "eventDetailsPageLink_xpath":"//div[@id='headline']/a/@href",
+         "eventName_xpath":"//h1[@id='headline']/text()",
+         "eventLocation_xpath":"//div[@id='floated']/div[@id='event_location']/text()",
+         "eventDateTime_xpath":
+            [
+            "//div[@class='content_default']/div[@id='floated']/div[@id='event_date']/text()",
+            "//div[@id='floated']/div[@id='event_etc']/text()"
+            ],
+         "eventDescription_xpath":"//div[@id='body']/p/text()",
+         "eventPrice_xpath":"none",
+         "eventImage_xpath":"//div[@id='topphoto']/table/tbody/tr/td/a/img[@id='photo_file']/@src"
+      },
+      {
+         "is_json":"false",
+         "name":"PVD_artsnowri",
+         "link":"http://www.artsnowri.com/web_services/calendar/163/",
+         "site_type":"2",
+         "pagination":"//div/p[@class='pagination']/a/@href",
+         "pagination_type": "1",
+         "domain":"http://www.artsnowri.com",
+         "eventDetailsPageLink_xpath":"//td[@class='event_name']/a/@href",
+         "eventName_xpath":"//td[@class='htmlwidtitle']/text()",
+         "eventLocation_xpath":[
+            "//p[preceding::h3[@class='htmlwidvenue']]/a/strong/text()",
+            "//p[preceding::h3[@class='htmlwidvenue']][3]/text()[1]",
+            "//p[preceding::h3[@class='htmlwidvenue']][3]/text()[2]"
+            ],
+         "eventDateTime_xpath":"//p[preceding::h3[@class='htmlwidtimes']][1]/text()",
+         "eventDescription_xpath":"//*[@id='spotlight_right']/p[4]/text()",
+         "eventPrice_xpath":"//div[@id='event_info']/p[2]/text()",
+         "eventImage_xpath":"//img[@class='event_image']/@src"
+      },
+      {
+         "is_json":"false",
+         "name":"FunCheapSF",
+         "link":"http://sf.funcheap.com/events/san-francisco/",
+         "site_type":"2",
+         "pagination":"//div[@id='navigation']/div/a/@href",
+         "pagination_type": "1",
+         "domain":"http://sf.funcheap.com",
+         "eventDetailsPageLink_xpath":"//span[@class='title2']/a/@href",
+         "eventName_xpath":"//h1[@class='title']/text()",
+         "eventLocation_xpath":[
+            "(//div[@id='stats']/span/span/a/text())[last()]",
+            "//div[@id='stats']/span/span/text()[last()]"
+            ],
+         "eventDateTime_xpath":[
+            "//div[@id='stats']/span/a/text()",
+            "//div[@id='stats']/span/span/text()[1]"
+            ],
+         "eventDescription_xpath":"//div[2]/blockquote[2]/p/descendant-or-self::text()",
+         "eventPrice_xpath":  [
+            "//div[@id='stats']/span/span/span/text()",
+            "(//div[@id='stats']/span/span/a[count(.)>1]/text())[1]"
+            ],
+         "eventImage_xpath":"//div[2]/blockquote[2]/img/@src"
+      },
+      {
+         "is_json":"false",
+         "name":"PVD_artsnowri_616",
+         "link":"http://www.artsnowri.com/web_services/calendar/616/events/",
+         "site_type":"2",
+         "pagination":"//div/p[@class='pagination']/a/@href",
+         "pagination_type": "1",
+         "domain":"http://www.artsnowri.com",
+         "eventDetailsPageLink_xpath":"//td[@class='event_name']/a/@href",
+
+         "eventName_xpath":"//td[@class='htmlwidtitle']/text()",
+         "eventLocation_xpath":[
+            "//p[preceding::h3[@class='htmlwidvenue']]/a/strong/text()",
+            "//p[preceding::h3[@class='htmlwidvenue']][3]/text()[1]",
+            "//p[preceding::h3[@class='htmlwidvenue']][3]/text()[2]"
+            ],
+         "eventDateTime_xpath":"//p[preceding::h3[@class='htmlwidtimes']][1]/text()",
+         "eventDescription_xpath":"//*[@id='spotlight_right']/p[4]/text()",
+         "eventPrice_xpath":"//div[@id='event_info']/p[2]/text()",
+         "eventImage_xpath":"//img[@class='event_image']/@src"
+      },
+      {
+         "is_json":"true",
+         "name":"PVD_goingout",
+         "link":"https://goingout.com/ri/eventssearchdata",
+         "pageVar": "?pg=",
+         "eventResult": "results",
+         "eventName": "title",
+         "description": "description",
+         "eventTime": [
+            "date", "start", "end"
+         ],
+         "image": "photo",
+         "location": [
+            "venue name",
+            "venue address_1",
+            "venue city",
+            "venue state",
+            "venue postal_code"
+         ],
+         "price": ""
+      },
+      {
+         "is_json":"false",
+         "name":"yelp_providence",
+         "link":"http://www.yelp.com/events/providence/browse",
+         "site_type":"2",
+         "pagination":"//a[@class='pager-page']/@href",
+         "pagination_type": "1",         
+         "domain":"http://www.yelp.com",
+         "eventDetailsPageLink_xpath":"//h2[@class='title']/a/@href",
+         "eventName_xpath":"//div[@id='main_events']/div/div[@class='ysection']/h1/text()",
+         "eventLocation_xpath":[
+            "//h2[@id='location_name']/a/span/text()",
+            "//address[@itemprop='address']/span/text()"
+            ],
+         "eventDateTime_xpath":"//div[@id='main_events']/div/div[@class='ysection']/dl[2]/dd/abbr/text()",
+         "eventDescription_xpath":"//dd[@class='event_description']/text()",
+         "eventPrice_xpath":"//div[@id='main_events']/div/div[@class='ysection']/dl[5]/dd/text()",
+         "eventImage_xpath":"//div[@id='event_details_photos']/div[@class='photo-box pb-ml']/a[@class='event-photo']/img/@src"
+      }
+   ]
+}
