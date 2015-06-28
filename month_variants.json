@@ -1,0 +1,14 @@
+{"months":[
+  {"name":"January", "variants":["january", "jan"]},
+  {"name":"February", "variants":["february", "feb"]},
+  {"name":"March", "variants":["march", "mar"]},
+  {"name":"April", "variants":["april", "apr"]},
+  {"name":"May", "variants":["may"]},
+  {"name":"June", "variants":["june", "jun"]},
+  {"name":"July", "variants":["july", "jul"]},
+  {"name":"August", "variants":["august", "aug"]},
+  {"name":"September", "variants":["september", "sept", "sep"]},
+  {"name":"October", "variants":["october", "oct"]},
+  {"name":"November", "variants":["november", "nov"]},
+  {"name":"December", "variants":["december", "dec"]}
+]}

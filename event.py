@@ -25,7 +25,6 @@ class Event:
   def writeHTML(self):
     pass
 
-
   def writeJSON(self):
     jsonString = "{"
     jsonString += '"source":"' + str(self.source.replace('"',"'").replace("\n"," ").replace("\r"," ").replace("\t", " ")) + '",'
@@ -37,9 +36,7 @@ class Event:
     jsonString += '"imagePath":"' + str(self.imagePath.replace('"',"'").replace("\n"," ").replace("\r"," ").replace("\t", " ")) + '",'
     jsonString += '"dump":"'+ self.dump.replace('"',"'").replace("\n","\\n").replace("\r","\\r").replace("\t", " ") + '"'
     jsonString += "}"
-
     return jsonString
-
 
   def returnString(self, sentArray):
     sendable = ""

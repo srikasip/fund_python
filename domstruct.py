@@ -19,5 +19,3 @@ class DomStruct:
       self.children.append(child.tag)
 
     return self.children
-
-# 8889102500 - fraud department
